@@ -1,4 +1,16 @@
 # Well, let's try speed up my ubuntu laptop:
 
-let's tune swappiness.
-> sysctl -w vm.swappiness=1
+# let's tune swappiness.
+
+> sudo apt-get install gksu leafpad
+
+# check your current swappiness value. Type in the terminal (use copy/paste):
+> cat /proc/sys/vm/swappiness
+
+# To change the swappiness into a more sensible setting, type in the terminal (use copy/paste to avoid typo's):
+> gksudo leafpad /etc/sysctl.conf
+
+Scroll to the bottom of the text file and add your swappiness parameter to override the default. Copy/paste the following lines:
+# Decrease swap usage to a more reasonable level
+vm.swappiness=10
+
