@@ -1,0 +1,4 @@
+# Well, let's try speed up my ubuntu laptop:
+
+let's tune swappiness.
+> sysctl -w vm.swappiness=1
